@@ -6,6 +6,7 @@ let wind = document.querySelector('.indicator-wind>.value');
 let pressure = document.querySelector('.indicator-pressure>.value');
 let image = document.querySelector('.image');
 let temperature = document.querySelector('.temperature>.value');
+let description = document.querySelector('.temperature-description>.value');
 let forecastBlock = document.querySelector('.forecast');
 let citySuggestions = document.querySelector('#suggestions');
 
@@ -119,7 +120,6 @@ searchLocation.addEventListener('input', async () => {
         option.value = cities[i].matching_full_name;
         citySuggestions.appendChild(option)
     }
-    console.log(result)
 })
 
 
@@ -127,7 +127,8 @@ let updateWeather = (data) => {
     city.textContent = data.name + ', ' + data.sys.country;
     day.textContent = dayOfWeek();
     humidity.textContent = data.main.humidity;
-    pressure.textContent = data.main.pressure
+    pressure.textContent = data.main.pressure;
+    description.textContent = data.weather[0].description;
     let windDirection;
     let deg = data.wind.deg;
     if (deg > 45 && deg <= 135) {
@@ -160,9 +161,11 @@ let updateForecast = (forecast) => {
         let temp = day.main.temp > 0 ?
             '+' + Math.round(day.main.temp)
             : Math.round(day.main.temp);
+        let weatherDescription = day.weather[0].description
         let forecastItem = `
         <article class="forecast-item">
             <img class="forecast-icon" src="${iconUrl}" alt="${day.weather[0].description}" >
+            <h6 class="forecast-details">${weatherDescription}</h6>
             <h3 class="forecast-day">${dayName}</h3>
             <p class="forecast-temperature"><span class="value">${temp}</span>&deg;C</p>
         </article>

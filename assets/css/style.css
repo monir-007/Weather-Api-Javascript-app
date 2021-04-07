@@ -1,20 +1,23 @@
 @font-face {
     font-family: 'Open Sans';
     src: url(../fonts/OpenSans.woff2) format('woff2'),
-         url(../fonts/OpenSans.woff) format("woff");
+    url(../fonts/OpenSans.woff) format("woff");
 }
+
 @font-face {
     font-family: 'Open Sans';
     src: url(../fonts/OpenSans-Light.woff2) format('woff2'),
     url(../fonts/OpenSans-Light.woff) format("woff");
     font-weight: 300;
 }
+
 @font-face {
     font-family: 'Open Sans';
     src: url(../fonts/OpenSans-Semibold.woff2) format('woff2'),
     url(../fonts/OpenSans-Semibold.woff) format("woff");
     font-weight: 600;
 }
+
 @font-face {
     font-family: 'Open Sans';
     src: url(../fonts/OpenSans-Bold.woff2) format('woff2'),
@@ -22,26 +25,28 @@
     font-weight: 700;
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
     margin: 0;
     background-image: radial-gradient(circle, #1c7fc2 0%, #009cdc 28%, #0d9ade 32%, #011844 100%);
     color: azure;
-    font-family: 'Open Sans',Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 300;
     font-size: 22px;
     transition: filter 0.5s;
     filter: blur(15px);
 }
-.weather{
+
+.weather {
     width: 80%;
     height: 100%;
     margin: 0 auto;
     padding: 20px 0;
     box-sizing: border-box;
 }
-.search{
+
+.search {
     width: 100%;
     padding: 15px 10px;
     border: none;
@@ -50,29 +55,35 @@ body{
     color: inherit;
     margin-bottom: 20px;
 }
-.search::placeholder{
+
+.search::placeholder {
     color: beige;
 }
-.today{
+
+.today {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.image{
+
+.image {
     width: 30vmin;
     align-self: center;
 }
-.city{
+
+.city {
     font-size: 36px;
     font-weight: 600;
     margin: 20px 0;
 }
-.day{
+
+.day {
     font-size: 30px;
     margin: 10px 0;
     font-weight: 400;
 }
-.indicator::before{
+
+.indicator::before {
     content: '';
     display: inline-block;
     vertical-align: middle;
@@ -81,29 +92,61 @@ body{
     background-size: cover;
     margin-right: 10px;
 }
-.indicator-humidity::before{
+
+.indicator-humidity::before {
     background-image: url(../images/humidity.png);
 }
-.indicator-wind::before{
+
+.indicator-wind::before {
     background-image: url(../images/wind.png);
 }
-.indicator-pressure::before{
-    background-image: url(../images/pressure.png );
+
+.indicator-pressure::before {
+    background-image: url(../images/pressure.png);
 }
-.temperature{
+
+.temperature {
     font-size: 60px;
+    color: palegoldenrod;
 }
-.forecast{
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.temperature-description {
+    margin: 0 10px 20px 0;
+    text-align: right;
+    font-weight: 400;
+    color: palegoldenrod;
+}
+
+.forecast {
     width: 100%;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.forecast-icon{
+
+.forecast-icon {
     max-width: 50%;
 }
-.forecast-item{
+
+.forecast-details {
+    font-weight: 300;
+    margin: 2px 0;
+    text-transform: capitalize;
+}
+
+.forecast-day {
+    margin: 2px 0;
+}
+
+.forecast-temperature {
+    margin: 2px 0;
+}
+
+.forecast-item {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     margin: 0 10px 10px;
