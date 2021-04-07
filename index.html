@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="weather">
+    <input class="search" list="suggestions" placeholder="Your City" type="search">
+    <datalist id="suggestions">
+    </datalist>
+    <div class="today">
+        <div class="details">
+            <h2 class="city">City</h2>
+            <p class="day">Day</p>
+            <div class="current"></div>
+            <p class="indicator indicator-humidity"><span class="value">50</span>%</p>
+            <p class="indicator indicator-wind"><span class="value">West, 5</span>m/5</p>
+            <p class="indicator indicator-pressure"><span class="value">1050</span>hPa</p>
+        </div>
+        <img class="image" src="assets/images/clear-sky.png" alt="Clear Sky">
+        <div class="temperature"><span class="value">+25</span>&deg;C</div>
+
+    </div>
+    <div class="forecast">
+        <article class="forecast-item">
+            <img class="forecast-icon" src="assets/images/clear-sky.png" alt="Clear sky" >
+            <h3 class="forecast-day">Day</h3>
+            <p class="forecast-temperature"><span class="value">+25</span>&deg;C</p>
+        </article>
+        <article class="forecast-item">
+            <img class="forecast-icon" src="assets/images/clear-sky.png" alt="Clear sky" >
+            <h3 class="forecast-day">Day</h3>
+            <p class="forecast-temperature"><span class="value">+25</span>&deg;C</p>
+        </article>
+        <article class="forecast-item">
+            <img class="forecast-icon" src="assets/images/clear-sky.png" alt="Clear sky" >
+            <h3 class="forecast-day">Day</h3>
+            <p class="forecast-temperature"><span class="value">+25</span>&deg;C</p>
+        </article>
+        <article class="forecast-item">
+            <img  class="forecast-icon" src="assets/images/clear-sky.png" alt="Clear sky">
+            <h3 class="forecast-day">Day</h3>
+            <p class="forecast-temperature"><span class="value">+25</span>&deg;C</p>
+        </article>
+        <article class="forecast-item">
+            <img class="forecast-icon" src="assets/images/clear-sky.png" alt="Clear sky" >
+            <h3 class="forecast-day">Day</h3>
+            <p class="forecast-temperature"><span class="value">+25</span>&deg;C</p>
+        </article>
+    </div>
+</div>
+
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
